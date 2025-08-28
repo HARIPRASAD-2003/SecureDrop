@@ -25,7 +25,7 @@
     {
       "title": "High-Level Architecture",
       "description": "System design of SecureDrop with B2B SDK, B2C App, and verification services.",
-      "path": "https://github.com/HARIPRASAD-2003/SecureDrop/blob/master/docs/architecture.png"
+      "path": "architecture.png"
     }
   ],
   "github": "https://github.com/HARIPRASAD-2003/SecureDrop",
