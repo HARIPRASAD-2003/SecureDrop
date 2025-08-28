@@ -1,15 +1,17 @@
 {
   "name": "SecureDrop ID - Delivery Authorization System",
-  "description": "A Proof-of-Concept (PoC) for a secure delivery system that ensures double verification at the time of package handover using QR codes, OTP, and NFC (future scope). It empowers customers to authorize deliveries while helping brands reduce fraud and unauthorized access.",
+  "description": "A Proof-of-Concept (PoC) system designed to enhance last-mile delivery security through double verification mechanisms. SecureDrop introduces a customer-first authorization model using QR codes, OTP, and (future) NFC-based validation, empowering customers to control package handovers while enabling brands to reduce fraud and unauthorized deliveries.",
   "type": "Public Project",
-  "tags": ["System Design", "Security", "B2B SDK", "B2C App", "Authentication", "Logistics"],
-  "roadmap": [
-    "Implement NFC-based virtual card authorization",
-    "Add anomaly detection with AI/ML for unusual delivery patterns",
-    "Provide blockchain-based tamper-proof delivery audit logs",
-    "Develop native mobile apps for delivery agents and customers",
-    "Enhance SDK with plug-and-play integrations for major e-commerce platforms"
+  "tags": [
+    "System Design",
+    "Security",
+    "B2B SDK",
+    "B2C App",
+    "Authentication",
+    "Logistics",
+    "Proof of Concept"
   ],
+  "status": "Ongoing - Proof of Concept",
   "technologies": [
     "React",
     "Next.js",
@@ -21,49 +23,57 @@
     "OTP Authentication",
     "SDK Development"
   ],
+  "features": [
+    "Unique SecureDropID with QR tagging for each package",
+    "Customer-controlled delivery approval via B2C app",
+    "Double verification for delivery agents (QR + OTP/QR/NFC)",
+    "B2B SDK for seamless integration with brand backends",
+    "Delegated authorization via dynamic codes for family/friends",
+    "Delivery audit trail with verification history"
+  ],
+  "deliverables": {
+    "B2B_SDK": [
+      "SecureDropID + QR tagging for every order",
+      "Integration APIs for brand backend systems",
+      "Verification hooks for real-time authorization checks",
+      "Lightweight QR service for package tagging"
+    ],
+    "B2C_App": [
+      "Delivery dashboard to track and manage upcoming orders",
+      "Approve or reject deliveries in real-time",
+      "Multi-factor verification: OTP, QR, and (future) NFC",
+      "Delegated access with temporary codes for trusted contacts",
+      "Comprehensive delivery history with verification logs"
+    ]
+  },
+  "roadmap": [
+    "Stage 1 (Current PoC): Build core flows — QR-based order tagging, OTP verification, customer approval via B2C app, and SDK prototype for brands.",
+    "Stage 2: Extend B2B SDK with robust APIs for integration and real-time delivery authorization checks.",
+    "Stage 3: Enhance B2C app with delivery history, delegated access (family/friends), and improved UI for real-time approvals.",
+    "Stage 4: Introduce NFC-based virtual card verification to support touch-based double authorization.",
+    "Stage 5: Add anomaly detection using AI/ML to flag unusual delivery patterns (e.g., location/time mismatches).",
+    "Stage 6: Implement blockchain-backed audit logs to ensure tamper-proof delivery history.",
+    "Stage 7 (Future): Release native mobile apps for customers and delivery agents with full SecureDrop flows."
+  ],
   "eventImages": [
     {
       "title": "High-Level Architecture",
-      "description": "System design of SecureDrop with B2B SDK, B2C App, and verification services.",
+      "description": "System overview of SecureDrop showing B2B SDK, B2C App, and verification services.",
       "path": "architecture.png"
     }
   ],
   "github": "https://github.com/HARIPRASAD-2003/SecureDrop",
-  "status": "Ongoing",
-  "features": [
-    "Unique SecureDropID + QR code tagging for every package",
-    "Customer-controlled delivery approval via B2C app",
-    "Delivery agent double verification (QR + OTP/QR/NFC)",
-    "B2B SDK for easy integration with e-commerce platforms",
-    "Dynamic authorization codes for family/friends",
-    "Audit trail for delivery history"
-  ],
-  "deliverables": {
-    "B2B_SDK": [
-      "Order tagging with SecureDropID + QR",
-      "Integration APIs for brand backend",
-      "Verification hooks to check delivery authorization status",
-      "Lightweight QR service integration"
-    ],
-    "B2C_App": [
-      "Delivery dashboard to manage upcoming deliveries",
-      "Approve/reject deliveries in real-time",
-      "OTP, QR, and future NFC-based authorization",
-      "Delegated access with temporary codes",
-      "History of past deliveries with verification logs"
-    ]
-  },
   "key_learnings": [
     "Designing secure multi-factor authorization workflows",
-    "Building B2B SDKs for third-party platform integration",
+    "Building SDKs for B2B integrations with third-party platforms",
     "Architecting microservices for QR and OTP verification",
-    "Balancing user experience with strong security protocols",
-    "Understanding logistics workflows and failure points"
+    "Balancing usability with strong security protocols",
+    "Mapping real-world logistics challenges into digital workflows"
   ],
   "story": {
-    "origin": "SecureDrop started as an idea to solve the growing issue of package theft and delivery fraud. I wanted to design a system that could give customers more control over their deliveries.",
-    "journey": "The project began with high-level diagrams and workflows, evolving into a Proof-of-Concept with QR and OTP-based authorization. I built it as a multi-component system with a landing page, a B2C app, a B2B SDK, and optional admin tools.",
-    "growth": "With each iteration, I explored how brands could seamlessly integrate SecureDrop into their backends, while customers could enjoy peace of mind knowing deliveries required explicit authorization.",
-    "current": "SecureDrop is currently an ongoing PoC, with planned expansions into NFC-based verification, AI anomaly detection, and blockchain-backed audit logs."
+    "origin": "SecureDrop originated as an idea to combat package theft and delivery fraud by shifting control to the end-customer.",
+    "journey": "The project began with system design diagrams and workflow modeling, evolving into a multi-component PoC with QR and OTP-based double verification.",
+    "growth": "Iterations have focused on integrating brand-side SDKs and customer-facing apps to demonstrate seamless collaboration between logistics providers and end-users.",
+    "current": "SecureDrop is in its Proof-of-Concept stage, demonstrating double verification flows while laying the foundation for NFC, AI-driven anomaly detection, and blockchain-backed audit trails in the future."
   }
 }
